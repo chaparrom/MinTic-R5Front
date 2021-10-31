@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title> Aplicación CABAÑAS </title>
+    </head>
+    <body>
+<!------------------------------------------------------------------------------------------------------>
+        <img class="image-fondo" src="banner.jpg" alt="Banner">        
+        <h1>Aplicación de Cabañas</h1>        
+
+        <button onclick="window.location.href='reports.html'">Reports</button>
+
+         <h2>Categorías</h2>
+        <div id="resultadoCategoria"></div>
+        <script type="text/javascript">
+            window.onload = consultarCategoria();
+        </script>
+        <br>
+        <div>
+            <input type="text" id="name2" placeholder="Nombre" style="width: 100px">
+            <input type="text" id="description2" placeholder="Descripción" style="width: 205px">
+            <button style=background-color:skyblue   onclick="adicionarCategoria()">Adicionar</button>
+        </div>
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h2>Clientes</h2>
+        <div id="resultadoCliente"></div>
+        <script type="text/javascript">
+            window.onload = consultarCliente();
+        </script>
+        <br>
+        <div>
+            <input type="text" id="name" placeholder="Nombre" style="width: 210px">
+            <input type="text" id="email" placeholder="Correo Electrónico" style="width: 210px">
+            <input type="number" id="age" placeholder="Edad" style="width: 50px" min="1" max="100">
+            <input type="password" id="password" placeholder="Contraseña" style="width: 100px">
+            <button style=background-color:skyblue onclick="adicionarCliente()">Adicionar</button>
+        </div>
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h2>Cabañas</h2>
+        <div id="resultadoCabaña"></div>
+        <script type="text/javascript">
+            window.onload = consultarCabaña();
+        </script>
+        <br>
+        <div>
+            <input type="text" id="name1" placeholder="Nombre" style="width: 200px">
+            <input type="text" id="brand" placeholder="Tipo" style="width: 140px">
+            <input type="number" id="rooms" placeholder="Habitaciones" style="width: 95px" min="1" max="100">
+            <input type="text" id="description" placeholder="Descripción" style="width: 250px">
+            <select id="listCategory"></select>
+            <button style=background-color:skyblue onclick="adicionarCabaña()">Adicionar</button>
+        </div>
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h2>Mensajes</h2>
+        <div id="resultadoMensaje"></div>
+        <script type="text/javascript">
+            window.onload = consultarMensaje();
+        </script>
+        <br>
+        <div>
+                    <select id="listClient"></select>
+                    <select id="listCabin"></select>
+                    <input type="text" id="messagetext" placeholder="Mensaje" style="width: 600px">
+                    <button style=background-color:skyblue onclick="adicionarMensaje()">Adicionar</button>
+        </div>        
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h2>Reservaciones</h2>
+        <div id="resultadoReservacion"></div>
+        <script type="text/javascript">
+            window.onload = consultarReservacion();
+        </script>
+        <br>
+        <div>
+            <select id="listClient1"></select>
+            <select id="listCabin1"></select>
+            <input type="date" id="startDate" placeholder="Fecha Inicio" style="width: 130px">
+            <input type="date" id="endDate" placeholder="Fecha Devolucion" style="width: 130px">
+            <input type="text" id="status" placeholder="Estado" style="width: 150px">
+            <input type="number" id="score" placeholder="Calificacion" style="width: 100px" min="1" max="5">
+            <button style=background-color:skyblue onclick="adicionarReservacion()">Adicionar</button>
+        </div>        
+        <hr>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title> Aplicación CABAÑAS </title>
+    </head>
+    <body>
+<!------------------------------------------------------------------------------------------------------>
+        <img class="image-fondo" src="banner.jpg" alt="Banner">        
+        <h1>Aplicación de Cabañas</h1>   
+        <button onclick="window.location.href='index.html'">Regresar</button>
+<!------------------------------------------------------------------------------------------------------>
+        <h2>Reportes</h2>   
+ 
+        <h3>Reservas en el periodo</h3>
+        <br>
+        <div>
+            <input type="date" id="startDate" placeholder="Fecha Desde" style="width: 130px">
+            <input type="date" id="endDate" placeholder="Fecha Hasta" style="width: 130px">
+            <button style=background-color:skyblue onclick="reporteReservas()">Generar Reporte</button>
+
+            <div id="resultadoReport"></div>
+
+        </div>
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h3>Reservas Completadas vs Canceladas</h3>
+        <br>
+        <div>
+            <div id="resultadoReport1"></div>
+            <script type="text/javascript">
+                window.onload = reporteCompara();
+            </script>    
+        </div>
+        <hr>
+<!------------------------------------------------------------------------------------------------------>
+        <h3>Ranking de clientes</h3>
+        <br>
+        <div>
+            <div id="resultadoReport2"></div>
+            <script type="text/javascript">
+                window.onload = reporteRanking();
+            </script>    
+
+        </div>
+        <hr>
+
+    </body>
+</html>

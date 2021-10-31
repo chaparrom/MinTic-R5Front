@@ -1,0 +1,33 @@
+body{
+    background-color:aliceblue 
+}
+    
+
+p {
+    font-size: 25px;
+}
+
+h1 {
+    padding-bottom: 30px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 5px;
+}
+
+.image-fondo {
+    width: 100%;
+    height: 2%;
+}
+
+
+#title {
+    font-style: 25;
+    color:red;
+    text-decoration: underline;
+
+}
+
+    
