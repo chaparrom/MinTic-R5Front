@@ -633,8 +633,6 @@ function actualizarReservacion(idReservation1){
 
 function reporteReservas(){
     $("#resultadoReport").empty();
-    $("#startDate").val("");
-    $("#endDate").val("");
 
 
     if ($("#startDate").val() != "" && $("#endDate").val() != "" ) {
@@ -680,7 +678,7 @@ function reporteReservas(){
                 }
                 tableReport+="</table>";
                 $("#resultadoReport").append(tableReport);
-
+          
 
 
 
